@@ -1,0 +1,14 @@
+NRRD0005
+# Complete NRRD file format specification at:
+# http://teem.sourceforge.net/nrrd/format.html
+type: unsigned char
+dimension: 3
+space: 3D-right-handed
+sizes: 491 305 126
+space directions: (0.75036659877800393,0,0) (0,0.72977016393442629,0) (0,0,2.9728492063492062)
+centerings: cell cell cell
+kinds: space space space
+encoding: gzip
+space origin: (-191.70599999999999,-94.446899999999999,-270.56900000000002)
+measurement frame: (1,0,0) (0,1,0) (0,0,1)
+data file: fieldOut.raw.gz
