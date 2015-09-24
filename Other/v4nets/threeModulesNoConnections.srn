@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE network PUBLIC "-//SCIRun/Network DTD" "network.dtd">
+<network version="v4.7" netversion="1" name="{Main}" bbox="{304 134 514 429}" creationDate="{Thu Sep 24 2015}" creationTime="{15:54:50}" geometry="{800x800+0+0}">
+  <note>{}</note>
+  <modules>
+    <module id="m1" package="SCIRun" category="Math" name="ComputeSVD" version="1.0">
+      <position x="357" y="134"/>
+    </module>
+    <module id="m2" package="SCIRun" category="NewField" name="CreateLatVol" version="1.0">
+      <position x="304" y="258"/>
+      <var name="sizex" val="{16}" substitute="no"/>
+      <var name="sizey" val="{16}" substitute="no"/>
+      <var name="sizez" val="{16}" substitute="no"/>
+      <var name="padpercent" val="{0.0}" substitute="no"/>
+      <var name="data-at" val="{Nodes}" substitute="no"/>
+      <var name="element-size" val="{Mesh}" substitute="no"/>
+    </module>
+    <module id="m3" package="SCIRun" category="Visualization" name="ShowField" version="1.0">
+      <position x="386" y="376"/>
+      <var name="nodes_on" val="{1}" substitute="no"/>
+      <var name="nodes_transparency" val="{0}" substitute="no"/>
+      <var name="nodes_color_type" val="{1}" substitute="no"/>
+      <var name="nodes_display_type" val="{Points}" substitute="no"/>
+      <var name="edges_on" val="{1}" substitute="no"/>
+      <var name="edges_transparency" val="{0}" substitute="no"/>
+      <var name="edges_color_type" val="{1}" substitute="no"/>
+      <var name="edges_display_type" val="{Lines}" substitute="no"/>
+      <var name="faces_on" val="{1}" substitute="no"/>
+      <var name="faces_transparency" val="{0}" substitute="no"/>
+      <var name="faces_color_type" val="{1}" substitute="no"/>
+      <var name="faces_normals" val="{0}" substitute="no"/>
+      <var name="faces_usetexture" val="{0}" substitute="no"/>
+      <var name="text_on" val="{0}" substitute="no"/>
+      <var name="text_color_type" val="{0}" substitute="no"/>
+      <var name="text_color-r" val="{1.0}" substitute="no"/>
+      <var name="text_color-g" val="{1.0}" substitute="no"/>
+      <var name="text_color-b" val="{1.0}" substitute="no"/>
+      <var name="text_backface_cull" val="{0}" substitute="no"/>
+      <var name="text_always_visible" val="{0}" substitute="no"/>
+      <var name="text_fontsize" val="{1}" substitute="no"/>
+      <var name="text_precision" val="{3}" substitute="no"/>
+      <var name="text_render_locations" val="{0}" substitute="no"/>
+      <var name="text_show_data" val="{1}" substitute="no"/>
+      <var name="text_show_nodes" val="{0}" substitute="no"/>
+      <var name="text_show_edges" val="{0}" substitute="no"/>
+      <var name="text_show_faces" val="{0}" substitute="no"/>
+      <var name="text_show_cells" val="{0}" substitute="no"/>
+      <var name="def_color-r" val="{0.5}" substitute="no"/>
+      <var name="def_color-g" val="{0.5}" substitute="no"/>
+      <var name="def_color-b" val="{0.5}" substitute="no"/>
+      <var name="def_color-a" val="{0.5}" substitute="no"/>
+      <var name="nodes_scale" val="{0.03}" substitute="no"/>
+      <var name="nodes_scaleNV" val="{0.03}" substitute="no"/>
+      <var name="edges_scale" val="{0.15}" substitute="no"/>
+      <var name="edges_scaleNV" val="{0.15}" substitute="no"/>
+      <var name="active_tab" val="{Nodes}" substitute="no"/>
+      <var name="interactive_mode" val="{Interactive}" substitute="no"/>
+      <var name="show_progress" val="{0}" substitute="no"/>
+      <var name="field_name" val="{}" substitute="no"/>
+      <var name="field_name_override" val="{0}" substitute="no"/>
+      <var name="nodes_resolution" val="{6}" substitute="no"/>
+      <var name="edges_resolution" val="{6}" substitute="no"/>
+      <var name="approx_div" val="{1}" substitute="no"/>
+      <var name="use_default_size" val="{0}" substitute="no"/>
+    </module>
+  </modules>
+</network>
