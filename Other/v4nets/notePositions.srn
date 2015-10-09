@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE network PUBLIC "-//SCIRun/Network DTD" "network.dtd">
+<network version="v4.7" netversion="2" name="{Main}" bbox="{266 92 403 451}" creationDate="{Fri Oct 09 2015}" creationTime="{17:12:04}" geometry="{800x800+1217+248}">
+  <note>{}</note>
+  <modules>
+    <module id="m1" package="SCIRun" category="MiscField" name="ReportFieldInfo" version="1.0">
+      <position x="266" y="92"/>
+      <note position="{w}" color="{white}">{Note Left}</note>
+    </module>
+    <module id="m2" package="SCIRun" category="MiscField" name="ReportFieldInfo" version="1.0">
+      <position x="268" y="179"/>
+      <note position="{e}" color="{white}">{Note Right}</note>
+    </module>
+    <module id="m3" package="SCIRun" category="MiscField" name="ReportFieldInfo" version="1.0">
+      <position x="268" y="252"/>
+      <note position="{n}" color="{white}">{Note Top}</note>
+    </module>
+    <module id="m4" package="SCIRun" category="MiscField" name="ReportFieldInfo" version="1.0">
+      <position x="269" y="325"/>
+      <note position="{s}" color="{white}">{Note Bottom}</note>
+    </module>
+    <module id="m5" package="SCIRun" category="MiscField" name="ReportFieldInfo" version="1.0">
+      <position x="268" y="398"/>
+      <note position="{tooltip}" color="{white}">{Note tooltip}</note>
+    </module>
+  </modules>
+</network>
