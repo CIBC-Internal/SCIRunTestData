@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE network PUBLIC "-//SCIRun/Network DTD" "network.dtd">
+<network version="v4.7" netversion="1" name="{Main}" bbox="{268 99 509 352}" creationDate="{Thu Oct 08 2015}" creationTime="{16:17:23}" geometry="{800x800+237+20}">
+  <note>{}</note>
+  <modules>
+    <module id="m1" package="SCIRun" category="Math" name="ComputeSVD" version="1.0">
+      <position x="268" y="99"/>
+      <note position="{w}" color="{white}">{Note on the left}</note>
+    </module>
+    <module id="m2" package="SCIRun" category="Math" name="ConvertMatrixType" version="1.0">
+      <position x="371" y="302"/>
+      <note position="{e}" color="{#ff0000}">{Note on the right in red}</note>
+      <var name="oldtype" val="{Same}" substitute="no"/>
+      <var name="newtype" val="{Unknown}" substitute="no"/>
+      <var name="nrow" val="{??}" substitute="no"/>
+      <var name="ncol" val="{??}" substitute="no"/>
+    </module>
+  </modules>
+  <connections>
+    <connection id="c1" from="m1" fromport="0" to="m2" toport="0">
+      <note position="{def}" color="{dodgerblue}">{Connection note}</note>
+    </connection>
+  </connections>
+</network>
