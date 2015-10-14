@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE network PUBLIC "-//SCIRun/Network DTD" "network.dtd">
+<network version="v4.7" netversion="2" name="{Main}" bbox="{239 116 368 350}" creationDate="{Tue Oct 13 2015}" creationTime="{17:36:54}" geometry="{800x800+0+0}">
+  <note>{}</note>
+  <modules>
+    <module id="m1" package="SCIRun" category="NewField" name="CreateLatVol" version="1.0">
+      <position x="240" y="116"/>
+      <note position="{n}" color="{white}">{2,3,4}</note>
+      <var name="sizex" val="{2}" substitute="no"/>
+      <var name="sizey" val="{3}" substitute="no"/>
+      <var name="sizez" val="{4}" substitute="no"/>
+      <var name="padpercent" val="{0.0}" substitute="no"/>
+      <var name="data-at" val="{Nodes}" substitute="no"/>
+      <var name="element-size" val="{Mesh}" substitute="no"/>
+      <var name="ui_geometry" val="{288x300+612+167}" substitute="no"/>
+    </module>
+    <module id="m2" package="SCIRun" category="NewField" name="CreateLatVol" version="1.0">
+      <position x="240" y="215"/>
+      <note position="{n}" color="{white}">{10,10,10,0.10}</note>
+      <var name="sizex" val="{10}" substitute="no"/>
+      <var name="sizey" val="{10}" substitute="no"/>
+      <var name="sizez" val="{10}" substitute="no"/>
+      <var name="padpercent" val="{10.0}" substitute="no"/>
+      <var name="data-at" val="{Nodes}" substitute="no"/>
+      <var name="element-size" val="{Mesh}" substitute="no"/>
+      <var name="ui_geometry" val="{288x300+20+42}" substitute="no"/>
+    </module>
+    <module id="m3" package="SCIRun" category="NewField" name="CreateLatVol" version="1.0">
+      <position x="239" y="300"/>
+      <note position="{n}" color="{white}">{cells, between 0-n}</note>
+      <var name="sizex" val="{10}" substitute="no"/>
+      <var name="sizey" val="{10}" substitute="no"/>
+      <var name="sizez" val="{10}" substitute="no"/>
+      <var name="padpercent" val="{10.0}" substitute="no"/>
+      <var name="data-at" val="{Cells}" substitute="no"/>
+      <var name="element-size" val="{Element}" substitute="no"/>
+      <var name="ui_geometry" val="{288x300+20+64}" substitute="no"/>
+    </module>
+  </modules>
+</network>
