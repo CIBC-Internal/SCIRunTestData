@@ -1,0 +1,11 @@
+NRRD0003
+# Complete NRRD file format specification at:
+# http://teem.sourceforge.net/nrrd/format.html
+type: double
+dimension: 2
+sizes: 3 3
+kinds: domain domain
+labels: "dense-columns" "dense-rows"
+endian: little
+encoding: raw
+data file: ./nrrdMatrixRawBinary.raw
