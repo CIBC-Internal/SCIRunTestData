@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE network PUBLIC "-//SCIRun/Network DTD" "network.dtd">
+<network version="v4.7" netversion="71" name="{Main}" bbox="{209 47 337 97}" creationDate="{Wed Aug 08 2018}" creationTime="{14:27:38}" geometry="{800x800+0+0}">
+  <note>{}</note>
+  <modules>
+    <module id="m1" package="SCIRun" category="Math" name="CreateMatrix" version="1.0">
+      <position x="209" y="47"/>
+      <var name="rows" val="{2}" substitute="no"/>
+      <var name="cols" val="{3}" substitute="no"/>
+      <var name="data" val="{{0.1 0.2} {0.3 0.4} {0.5 0.6}}" substitute="no"/>
+      <var name="clabel" val="{0 1 2}" substitute="no"/>
+      <var name="rlabel" val="{0 1}" substitute="no"/>
+      <var name="ui_geometry" val="{419x238+20+43}" substitute="no"/>
+      <var name="ui_geometry" val="{419x238+20+43}" substitute="no"/>
+    </module>
+  </modules>
+</network>

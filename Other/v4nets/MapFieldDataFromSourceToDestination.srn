@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE network PUBLIC "-//SCIRun/Network DTD" "network.dtd">
+<network version="v4.7" netversion="1" name="{Main}" bbox="{273 62 530 261}" creationDate="{Tue Aug 07 2018}" creationTime="{13:33:40}" geometry="{800x800+0+0}">
+  <note>{}</note>
+  <modules>
+    <module id="m1" package="SCIRun" category="ChangeFieldData" name="MapFieldDataFromSourceToDestination" version="1.0">
+      <position x="273" y="62"/>
+      <var name="interpolation_basis" val="{linear}" substitute="no"/>
+      <var name="map_source_to_single_dest" val="{0}" substitute="no"/>
+      <var name="exhaustive_search_max_dist" val="{-1.0}" substitute="no"/>
+      <var name="default-value" val="{0.0}" substitute="no"/>
+      <var name="ui_geometry" val="{413x264+20+43}" substitute="no"/>
+    </module>
+    <module id="m2" package="SCIRun" category="ChangeFieldData" name="MapFieldDataFromSourceToDestination" version="1.0">
+      <position x="275" y="211"/>
+      <var name="interpolation_basis" val="{constant}" substitute="no"/>
+      <var name="map_source_to_single_dest" val="{1}" substitute="no"/>
+      <var name="exhaustive_search_max_dist" val="{-1.0}" substitute="no"/>
+      <var name="default-value" val="{0.0}" substitute="no"/>
+      <var name="ui_geometry" val="{413x264+20+43}" substitute="no"/>
+    </module>
+    <module id="m3" package="SCIRun" category="ChangeFieldData" name="MapFieldDataFromSourceToDestination" version="1.0">
+      <position x="274" y="134"/>
+      <var name="interpolation_basis" val="{constant}" substitute="no"/>
+      <var name="map_source_to_single_dest" val="{0}" substitute="no"/>
+      <var name="exhaustive_search_max_dist" val="{-1.0}" substitute="no"/>
+      <var name="default-value" val="{0.0}" substitute="no"/>
+      <var name="ui_geometry" val="{413x264+20+43}" substitute="no"/>
+    </module>
+  </modules>
+</network>
