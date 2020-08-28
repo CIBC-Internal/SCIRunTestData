@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE network PUBLIC "-//SCIRun/Network DTD" "network.dtd">
+<network version="v4.1" netversion="0" name="{Main}" bbox="{136 63 283 508}" creationDate="{Thu Dec 11 2008}" creationTime="{11:03:41}" geometry="{800x800+0+0}">
+  <note>{}</note>
+  <modules>
+    <module id="m1" package="SCIRun" category="NewField" name="CreateLatVol" version="1.0" gui_visible="yes">
+      <position x="136" y="63"/>
+      <var name="sizex" val="{40}" substitute="no"/>
+      <var name="sizey" val="{40}" substitute="no"/>
+      <var name="sizez" val="{40}" substitute="no"/>
+      <var name="padpercent" val="{0.0}" substitute="no"/>
+      <var name="data-at" val="{Cells}" substitute="no"/>
+      <var name="element-size" val="{Mesh}" substitute="no"/>
+      <var name="ui_geometry" val="{288x312+20+64}" substitute="no"/>
+    </module>
+    <module id="m2" package="SCIRun" category="ChangeFieldData" name="CalculateFieldData" version="1.0" gui_visible="yes">
+      <position x="136" y="135"/>
+      <var name="function" val="{RESULT = (X^2+Y^2+Z^2);&#10;&#10;}" substitute="no"/>
+      <var name="format" val="{int}" substitute="no"/>
+      <var name="cache" val="{0}" substitute="no"/>
+      <var name="ui_geometry" val="{866x298+20+64}" substitute="no"/>
+    </module>
+    <module id="m3" package="SCIRun" category="NewField" name="GetDomainBoundary" version="1.0" gui_visible="yes">
+      <position x="136" y="215"/>
+      <var name="userange" val="{0}" substitute="no"/>
+      <var name="minrange" val="{0.0}" substitute="no"/>
+      <var name="maxrange" val="{255.0}" substitute="no"/>
+      <var name="usevalue" val="{0}" substitute="no"/>
+      <var name="value" val="{1.0}" substitute="no"/>
+      <var name="includeouterboundary" val="{0}" substitute="no"/>
+      <var name="innerboundaryonly" val="{1}" substitute="no"/>
+      <var name="noinnerboundary" val="{0}" substitute="no"/>
+      <var name="disconnect" val="{0}" substitute="no"/>
+      <var name="ui_geometry" val="{365x182+40+84}" substitute="no"/>
+    </module>
+    <module id="m4" package="SCIRun" category="Visualization" name="ShowField" version="1.0">
+      <position x="136" y="376"/>
+      <var name="nodes_on" val="{0}" substitute="no"/>
+      <var name="nodes_transparency" val="{0}" substitute="no"/>
+      <var name="nodes_color_type" val="{0}" substitute="no"/>
+      <var name="nodes_display_type" val="{Points}" substitute="no"/>
+      <var name="edges_on" val="{0}" substitute="no"/>
+      <var name="edges_transparency" val="{0}" substitute="no"/>
+      <var name="edges_color_type" val="{0}" substitute="no"/>
+      <var name="edges_display_type" val="{Lines}" substitute="no"/>
+      <var name="faces_on" val="{1}" substitute="no"/>
+      <var name="faces_transparency" val="{0}" substitute="no"/>
+      <var name="faces_color_type" val="{0}" substitute="no"/>
+      <var name="faces_normals" val="{0}" substitute="no"/>
+      <var name="faces_usetexture" val="{0}" substitute="no"/>
+      <var name="text_on" val="{0}" substitute="no"/>
+      <var name="text_color_type" val="{0}" substitute="no"/>
+      <var name="text_color-r" val="{1.0}" substitute="no"/>
+      <var name="text_color-g" val="{1.0}" substitute="no"/>
+      <var name="text_color-b" val="{1.0}" substitute="no"/>
+      <var name="text_backface_cull" val="{0}" substitute="no"/>
+      <var name="text_always_visible" val="{0}" substitute="no"/>
+      <var name="text_fontsize" val="{1}" substitute="no"/>
+      <var name="text_precision" val="{3}" substitute="no"/>
+      <var name="text_render_locations" val="{0}" substitute="no"/>
+      <var name="text_show_data" val="{1}" substitute="no"/>
+      <var name="text_show_nodes" val="{0}" substitute="no"/>
+      <var name="text_show_edges" val="{0}" substitute="no"/>
+      <var name="text_show_faces" val="{0}" substitute="no"/>
+      <var name="text_show_cells" val="{0}" substitute="no"/>
+      <var name="def_color-r" val="{0.0}" substitute="no"/>
+      <var name="def_color-g" val="{0.65}" substitute="no"/>
+      <var name="def_color-b" val="{1.0}" substitute="no"/>
+      <var name="def_color-a" val="{0.5}" substitute="no"/>
+      <var name="nodes_scale" val="{0.0235}" substitute="no"/>
+      <var name="nodes_scaleNV" val="{0.03}" substitute="no"/>
+      <var name="edges_scale" val="{0.15}" substitute="no"/>
+      <var name="edges_scaleNV" val="{0.15}" substitute="no"/>
+      <var name="active_tab" val="{Edges}" substitute="no"/>
+      <var name="interactive_mode" val="{Interactive}" substitute="no"/>
+      <var name="show_progress" val="{0}" substitute="no"/>
+      <var name="field_name" val="{}" substitute="no"/>
+      <var name="field_name_override" val="{0}" substitute="no"/>
+      <var name="nodes_resolution" val="{6}" substitute="no"/>
+      <var name="edges_resolution" val="{6}" substitute="no"/>
+      <var name="approx_div" val="{1}" substitute="no"/>
+      <var name="use_default_size" val="{0}" substitute="no"/>
+      <var name="ui_geometry" val="{317x667+60+82}" substitute="no"/>
+    </module>
+    <module id="m5" package="SCIRun" category="Render" name="ViewScene" version="1.0">
+      <position x="136" y="456"/>
+      <gui_callback>
+        <callback>addViewer</callback>
+      </gui_callback>
+      <var name="ViewWindow_0-geometry" val="700x643+149+118" substitute="no"/>
+      <var name="ViewWindow_0-view-eyep-x" val="{-5.42486864738}" substitute="no"/>
+      <var name="ViewWindow_0-view-eyep-y" val="{-2.33328148255}" substitute="no"/>
+      <var name="ViewWindow_0-view-eyep-z" val="{-8.61808437232}" substitute="no"/>
+      <var name="ViewWindow_0-view-lookat-x" val="{0.0540838255885}" substitute="no"/>
+      <var name="ViewWindow_0-view-lookat-y" val="{0.0490388153074}" substitute="no"/>
+      <var name="ViewWindow_0-view-lookat-z" val="{-0.0417235550845}" substitute="no"/>
+      <var name="ViewWindow_0-view-up-x" val="{-0.730161888576}" substitute="no"/>
+      <var name="ViewWindow_0-view-up-y" val="{0.616165752739}" substitute="no"/>
+      <var name="ViewWindow_0-view-up-z" val="{0.29530218696}" substitute="no"/>
+      <var name="ViewWindow_0-view-fov" val="{20.0}" substitute="no"/>
+      <var name="ViewWindow_0-homeview-eyep-x" val="{2.1}" substitute="no"/>
+      <var name="ViewWindow_0-homeview-eyep-y" val="{1.6}" substitute="no"/>
+      <var name="ViewWindow_0-homeview-eyep-z" val="{11.5}" substitute="no"/>
+      <var name="ViewWindow_0-homeview-lookat-x" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-homeview-lookat-y" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-homeview-lookat-z" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-homeview-up-x" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-homeview-up-y" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-homeview-up-z" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-homeview-fov" val="{20.0}" substitute="no"/>
+      <var name="ViewWindow_0-sr" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-do_stereo" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-ortho-view" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-trackViewWindow0" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-lock-view-window" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-raxes" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-ambient-scale" val="{0.2}" substitute="no"/>
+      <var name="ViewWindow_0-diffuse-scale" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-specular-scale" val="{0.4}" substitute="no"/>
+      <var name="ViewWindow_0-emission-scale" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-shininess-scale" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-polygon-offset-factor" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-polygon-offset-units" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-point-size" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-line-width" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-text-offset" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-sbase" val="{0.4}" substitute="no"/>
+      <var name="ViewWindow_0-bgcolor-r" val="{0.86}" substitute="no"/>
+      <var name="ViewWindow_0-bgcolor-g" val="{0.86}" substitute="no"/>
+      <var name="ViewWindow_0-bgcolor-b" val="{0.86}" substitute="no"/>
+      <var name="ViewWindow_0-fogusebg" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-fogcolor-r" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-fogcolor-g" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-fogcolor-b" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-fog-start" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-fog-end" val="{0.71}" substitute="no"/>
+      <var name="ViewWindow_0-fog-visibleonly" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-inertia_loop_count" val="{204}" substitute="no"/>
+      <var name="ViewWindow_0-inertia_x" val="{0.995239393478}" substitute="no"/>
+      <var name="ViewWindow_0-inertia_y" val="{-0.0694723158318}" substitute="no"/>
+      <var name="ViewWindow_0-currentvisual" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-autoav" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-caxes" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-num" val="{6}" substitute="no"/>
+      <var name="ViewWindow_0-clip-visible" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-selected" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-clip-visible-1" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-frame-1" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-reverse-1" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-x-1" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-y-1" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-z-1" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-d-1" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-visible-2" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-frame-2" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-reverse-2" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-x-2" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-y-2" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-z-2" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-d-2" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-visible-3" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-frame-3" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-reverse-3" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-x-3" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-y-3" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-z-3" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-d-3" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-visible-4" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-frame-4" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-reverse-4" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-x-4" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-y-4" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-z-4" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-d-4" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-visible-5" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-frame-5" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-reverse-5" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-x-5" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-y-5" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-z-5" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-d-5" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-visible-6" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-frame-6" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-reverse-6" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-x-6" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-y-6" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-z-6" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-clip-normal-d-6" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-global-light0" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-global-light1" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-light2" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-light3" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-lightColors" val="{{1.0 1.0 1.0} {1.0 1.0 1.0} {1.0 1.0 1.0} {1.0 1.0 1.0}}" substitute="no"/>
+      <var name="ViewWindow_0-lightVectors" val="{{ 0 0 1 } { 0 0 1 } { 0 0 1 } { 0 0 1 }}" substitute="no"/>
+      <var name="ViewWindow_0-global-light" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-global-fog" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-debug" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-clip" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-global-cull" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-dl" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-type" val="{Gouraud}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-Nodes (1)&quot;" val="{1}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-Edges (1)&quot;" val="{1}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-Faces (1)&quot;" val="{1}" substitute="no"/>
+    </module>
+    <module id="m6" package="SCIRun" category="NewField" name="FairMesh" version="1.0">
+      <position x="136" y="292"/>
+      <var name="iterations" val="{50}" substitute="no"/>
+      <var name="method" val="{fast}" substitute="no"/>
+    </module>
+  </modules>
+  <connections>
+    <connection id="c1" from="m2" fromport="0" to="m3" toport="0"/>
+    <connection id="c2" from="m1" fromport="0" to="m2" toport="0"/>
+    <connection id="c3" from="m6" fromport="0" to="m4" toport="0"/>
+    <connection id="c4" from="m3" fromport="0" to="m6" toport="0"/>
+    <connection id="c5" from="m4" fromport="0" to="m5" toport="0"/>
+  </connections>
+</network>

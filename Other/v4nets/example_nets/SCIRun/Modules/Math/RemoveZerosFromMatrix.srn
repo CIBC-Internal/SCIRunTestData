@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE network PUBLIC "-//SCIRun/Network DTD" "network.dtd">
+<network version="v4.6" netversion="60" name="{Main}" bbox="{109 35 610 464}" creationDate="{Wed May 02 2012}" creationTime="{13:19:31}" geometry="{800x800+0+0}">
+  <note>{}</note>
+  <modules>
+    <module id="m1" package="SCIRun" category="Math" name="RemoveZerosFromMatrix" version="1.0" gui_visible="yes">
+      <position x="251" y="176"/>
+      <var name="row_or_col" val="{col}" substitute="no"/>
+      <var name="ui_geometry" val="{288x70+965+443}" substitute="no"/>
+    </module>
+    <module id="m2" package="SCIRun" category="Math" name="ReportMatrixInfo" version="1.0" gui_visible="yes">
+      <position x="109" y="414"/>
+      <var name="ui_geometry" val="{1120x206+279+59}" substitute="no"/>
+    </module>
+    <module id="m3" package="SCIRun" category="Math" name="CreateMatrix" version="1.0">
+      <position x="288" y="35"/>
+      <port_caching>
+        <port id="0" val="0"/>
+      </port_caching>
+      <var name="rows" val="{9}" substitute="no"/>
+      <var name="cols" val="{9}" substitute="no"/>
+      <var name="data" val="{{5 4 5 0 8 8 0 7 10} {6 0 0 0 0 0 0 0 0} {1 9 6 0 8 33 0 65 12} {54 76 23 0 7 2 0 1 4} {6 0 0 0 0 0 0 0 0} {2 4 67 0 8 2 0 12 34} {78 7 2 0 7 7 0 6 5} {34 56 54 0 12 98 0 87 65} {5 0 0 0 0 0 0 0 0}}" substitute="no"/>
+      <var name="clabel" val="{0 1 2 3 4 5 6 7 8}" substitute="no"/>
+      <var name="rlabel" val="{0 1 2 3 4 5 6 7 8}" substitute="no"/>
+      <var name="ui_geometry" val="{691x350+664+22}" substitute="no"/>
+    </module>
+    <module id="m4" package="SCIRun" category="Math" name="ReportMatrixInfo" version="1.0">
+      <position x="451" y="116"/>
+      <var name="ui_geometry" val="{1120x206+20+42}" substitute="no"/>
+    </module>
+    <module id="m5" package="SCIRun" category="String" name="PrintMatrixIntoString" version="1.0">
+      <position x="467" y="290"/>
+      <var name="formatstring" val="{%f    }" substitute="no"/>
+      <var name="ui_geometry" val="{288x108+60+82}" substitute="no"/>
+    </module>
+    <module id="m6" package="SCIRun" category="String" name="ReportStringInfo" version="1.0">
+      <position x="467" y="360"/>
+      <var name="inputstring" val="{5.000000    6.000000    1.000000    6.000000    2.000000    34.000000    5.000000    4.000000    0.000000    9.000000    0.000000    4.000000    56.000000    0.000000    5.000000    0.000000    6.000000    0.000000    67.000000    54.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    8.000000    0.000000    8.000000    0.000000    8.000000    12.000000    0.000000    8.000000    0.000000    33.000000    0.000000    2.000000    98.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    7.000000    0.000000    65.000000    0.000000    12.000000    87.000000    0.000000    10.000000    0.000000    12.000000    0.000000    34.000000    65.000000    0.000000    }" substitute="no"/>
+      <var name="ui_geometry" val="{597x434+60+82}" substitute="no"/>
+    </module>
+  </modules>
+  <connections>
+    <connection id="c1" from="m3" fromport="0" to="m1" toport="0"/>
+    <connection id="c2" from="m3" fromport="0" to="m4" toport="0"/>
+    <connection id="c3" from="m1" fromport="0" to="m2" toport="0"/>
+    <connection id="c4" from="m5" fromport="0" to="m6" toport="0"/>
+    <connection id="c5" from="m1" fromport="0" to="m5" toport="1"/>
+  </connections>
+</network>

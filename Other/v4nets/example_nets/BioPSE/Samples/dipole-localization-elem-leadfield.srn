@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE network PUBLIC "-//SCIRun/Network DTD" "network.dtd">
+<network version="v3.1.0" name="{Main}" bbox="{84 8 1092 793}" creationDate="{Fri Oct 12 2007}" creationTime="{16:40:29}" geometry="{800x800+0+0}">
+  <environment>
+    <var name="scisub_datadir" val="SCIRUN_DATA"/>
+    <var name="scisub_datafile" val="SCIRUN_DATAFILE"/>
+    <var name="scisub_dataset" val="SCIRUN_DATASET"/>
+  </environment>
+  <note>{}</note>
+  <modules>
+    <module id="m1" package="SCIRun" category="DataIO" name="ReadField" version="1.0">
+      <position x="283" y="8"/>
+      <var name="filename" val="{scisub_datadir/scisub_dataset/scisub_dataset-mesh.tvt.fld}" filename="yes" substitute="yes"/>
+      <var name="from-env" val="{}" substitute="no"/>
+    </module>
+    <module id="m2" package="SCIRun" category="NewField" name="GeneratePointSamplesFromFieldOrWidget" version="1.0">
+      <position x="283" y="68"/>
+      <var name="wtype" val="{rake}" substitute="no"/>
+      <var name="endpoints" val="{0}" substitute="no"/>
+      <var name="maxseeds" val="{15.0}" substitute="no"/>
+      <var name="numseeds" val="{4}" substitute="no"/>
+      <var name="rngseed" val="{2}" substitute="no"/>
+      <var name="rnginc" val="{1}" substitute="no"/>
+      <var name="clamp" val="{0}" substitute="no"/>
+      <var name="autoexecute" val="{1}" substitute="no"/>
+      <var name="dist" val="{uniscat}" substitute="no"/>
+      <var name="whichtab" val="{Random}" substitute="no"/>
+      <var name="ui_geometry" val="{350x269+416+878}" substitute="no"/>
+    </module>
+    <module id="m3" package="SCIRun" category="Math" name="ReportColumnMatrixMisfit" version="1.0">
+      <position x="102" y="601"/>
+      <var name="have_ui" val="{1}" substitute="no"/>
+      <var name="methodTCL" val="{CCinv}" substitute="no"/>
+      <var name="pTCL" val="{1}" substitute="no"/>
+      <var name="ui_geometry" val="{499x836+416+311}" substitute="no"/>
+    </module>
+    <module id="m4" package="SCIRun" category="Render" name="ViewScene" version="1.0">
+      <position x="594" y="749"/>
+      <gui_callback>
+        <callback>addViewer</callback>
+      </gui_callback>
+      <var name="ViewWindow_0-geometry" val="654x614+1694+102" substitute="no"/>
+      <var name="ViewWindow_0-view-eyep-x" val="{-6.5}" substitute="no"/>
+      <var name="ViewWindow_0-view-eyep-y" val="{1.8}" substitute="no"/>
+      <var name="ViewWindow_0-view-eyep-z" val="{9.7}" substitute="no"/>
+      <var name="ViewWindow_0-view-lookat-x" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-view-lookat-y" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-view-lookat-z" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-view-up-x" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-view-up-y" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-view-up-z" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-view-fov" val="{16.5}" substitute="no"/>
+      <var name="ViewWindow_0-sr" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-do_stereo" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-ortho-view" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-trackViewWindow0" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-lock-view-window" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-raxes" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-ambient-scale" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-diffuse-scale" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-specular-scale" val="{0.4}" substitute="no"/>
+      <var name="ViewWindow_0-emission-scale" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-shininess-scale" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-polygon-offset-factor" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-polygon-offset-units" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-point-size" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-line-width" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-sbase" val="{0.4}" substitute="no"/>
+      <var name="ViewWindow_0-bgcolor-r" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-bgcolor-g" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-bgcolor-b" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-fogusebg" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-fogcolor-r" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-fogcolor-g" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-fogcolor-b" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-fog-start" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-fog-end" val="{0.714265}" substitute="no"/>
+      <var name="ViewWindow_0-fog-visibleonly" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-inertia_mag" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-inertia_x" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-inertia_y" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-currentvisual" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-autoav" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-caxes" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-light0" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-global-light1" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-light2" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-light3" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-lightColors" val="{{1.0 1.0 1.0} {1.0 1.0 1.0} {1.0 1.0 1.0} {1.0 1.0 1.0}}" substitute="no"/>
+      <var name="ViewWindow_0-lightVectors" val="{{ 0 0 1 } { 0 0 1 } { 0 0 1 } { 0 0 1 }}" substitute="no"/>
+      <var name="ViewWindow_0-global-light" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-global-fog" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-debug" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-clip" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-global-cull" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-dl" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-type" val="{Gouraud}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-Dipole0 (1)&quot;" val="{1}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-Dipole0 (2)&quot;" val="{1}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-Dipole1 (2)&quot;" val="{1}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-Dipole2 (2)&quot;" val="{1}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-Nodes (4)&quot;" val="{1}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-Dipole3 (2)&quot;" val="{1}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-Nodes (3)&quot;" val="{1}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-ShowDipole Lines (2)&quot;" val="{1}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-Vectors (5)&quot;" val="{1}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-wwwww Vectors (5)&quot;" val="{1}" substitute="no"/>
+    </module>
+    <module id="m5" package="BioPSE" category="Visualization" name="ShowAndEditDipoles" version="1.0">
+      <position x="665" y="83"/>
+      <var name="num-dipoles" val="{1}" substitute="no"/>
+      <var name="widgetSizeGui_" val="{0.05}" substitute="no"/>
+      <var name="scaleModeGui_" val="{fixed}" substitute="no"/>
+      <var name="showLastVecGui_" val="{1}" substitute="no"/>
+      <var name="showLinesGui_" val="{0}" substitute="no"/>
+      <var name="max-len" val="{1.73205080757}" substitute="no"/>
+      <var name="newpos0-x" val="{0.2}" substitute="no"/>
+      <var name="newpos0-y" val="{0.2}" substitute="no"/>
+      <var name="newpos0-z" val="{0.2}" substitute="no"/>
+      <var name="newdir0-x" val="{0.57735026919}" substitute="no"/>
+      <var name="newdir0-y" val="{0.57735026919}" substitute="no"/>
+      <var name="newdir0-z" val="{0.57735026919}" substitute="no"/>
+      <var name="newmag0" val="{1.73205080757}" substitute="no"/>
+    </module>
+    <module id="m6" package="BioPSE" category="Visualization" name="ShowAndEditDipoles" version="1.0">
+      <position x="482" y="231"/>
+      <var name="num-dipoles" val="{4}" substitute="no"/>
+      <var name="widgetSizeGui_" val="{0.035}" substitute="no"/>
+      <var name="scaleModeGui_" val="{fixed}" substitute="no"/>
+      <var name="showLastVecGui_" val="{-2147483647}" substitute="no"/>
+      <var name="showLinesGui_" val="{-2147483647}" substitute="no"/>
+      <var name="max-len" val="{0.0}" substitute="no"/>
+      <var name="newpos0-x" val="{-0.712422512193}" substitute="no"/>
+      <var name="newpos0-y" val="{-0.444270963161}" substitute="no"/>
+      <var name="newpos0-z" val="{0.118633415814}" substitute="no"/>
+      <var name="newdir0-x" val="{0.0}" substitute="no"/>
+      <var name="newdir0-y" val="{0.0}" substitute="no"/>
+      <var name="newdir0-z" val="{0.0}" substitute="no"/>
+      <var name="newmag0" val="{0.0}" substitute="no"/>
+      <var name="newpos1-x" val="{0.59748854901}" substitute="no"/>
+      <var name="newpos1-y" val="{0.230053466713}" substitute="no"/>
+      <var name="newpos1-z" val="{-0.17612702876}" substitute="no"/>
+      <var name="newdir1-x" val="{0.0}" substitute="no"/>
+      <var name="newdir1-y" val="{0.0}" substitute="no"/>
+      <var name="newdir1-z" val="{0.0}" substitute="no"/>
+      <var name="newmag1" val="{0.0}" substitute="no"/>
+      <var name="newpos2-x" val="{0.284334519165}" substitute="no"/>
+      <var name="newpos2-y" val="{0.370037686916}" substitute="no"/>
+      <var name="newpos2-z" val="{-0.289328575352}" substitute="no"/>
+      <var name="newdir2-x" val="{0.0}" substitute="no"/>
+      <var name="newdir2-y" val="{0.0}" substitute="no"/>
+      <var name="newdir2-z" val="{0.0}" substitute="no"/>
+      <var name="newmag2" val="{0.0}" substitute="no"/>
+      <var name="newpos3-x" val="{-0.621993348111}" substitute="no"/>
+      <var name="newpos3-y" val="{-0.358649063456}" substitute="no"/>
+      <var name="newpos3-z" val="{0.226009853763}" substitute="no"/>
+      <var name="newdir3-x" val="{0.0}" substitute="no"/>
+      <var name="newdir3-y" val="{0.0}" substitute="no"/>
+      <var name="newdir3-z" val="{0.0}" substitute="no"/>
+      <var name="newmag3" val="{0.0}" substitute="no"/>
+    </module>
+    <module id="m7" package="SCIRun" category="Math" name="SolveMinNormLeastSqSystem" version="1.0">
+      <position x="84" y="523"/>
+    </module>
+    <module id="m8" package="SCIRun" category="Math" name="GetColumnOrRowFromMatrix" version="1.0">
+      <position x="84" y="382"/>
+      <var name="row_or_col" val="{col}" substitute="no"/>
+      <var name="selectable_min" val="{0}" substitute="no"/>
+      <var name="selectable_max" val="{18380.0}" substitute="no"/>
+      <var name="selectable_inc" val="{18381}" substitute="no"/>
+      <var name="selectable_units" val="{}" substitute="no"/>
+      <var name="range_min" val="{0}" substitute="no"/>
+      <var name="range_max" val="{0}" substitute="no"/>
+      <var name="playmode" val="{once}" substitute="no"/>
+      <var name="current" val="{0}" substitute="no"/>
+      <var name="execmode" val="{play}" substitute="no"/>
+      <var name="delay" val="{0}" substitute="no"/>
+      <var name="inc-amount" val="{1}" substitute="no"/>
+      <var name="send-amount" val="{1}" substitute="no"/>
+      <var name="data_series_done" val="{0}" substitute="no"/>
+    </module>
+    <module id="m9" package="SCIRun" category="Math" name="GetColumnOrRowFromMatrix" version="1.0">
+      <position x="265" y="377"/>
+      <var name="row_or_col" val="{col}" substitute="no"/>
+      <var name="selectable_min" val="{0}" substitute="no"/>
+      <var name="selectable_max" val="{18380.0}" substitute="no"/>
+      <var name="selectable_inc" val="{18381}" substitute="no"/>
+      <var name="selectable_units" val="{}" substitute="no"/>
+      <var name="range_min" val="{0}" substitute="no"/>
+      <var name="range_max" val="{0}" substitute="no"/>
+      <var name="playmode" val="{once}" substitute="no"/>
+      <var name="current" val="{0}" substitute="no"/>
+      <var name="execmode" val="{play}" substitute="no"/>
+      <var name="delay" val="{0}" substitute="no"/>
+      <var name="inc-amount" val="{1}" substitute="no"/>
+      <var name="send-amount" val="{1}" substitute="no"/>
+      <var name="data_series_done" val="{0}" substitute="no"/>
+    </module>
+    <module id="m10" package="SCIRun" category="Math" name="GetColumnOrRowFromMatrix" version="1.0">
+      <position x="448" y="371"/>
+      <var name="row_or_col" val="{col}" substitute="no"/>
+      <var name="selectable_min" val="{0}" substitute="no"/>
+      <var name="selectable_max" val="{18380.0}" substitute="no"/>
+      <var name="selectable_inc" val="{18381}" substitute="no"/>
+      <var name="selectable_units" val="{}" substitute="no"/>
+      <var name="range_min" val="{0}" substitute="no"/>
+      <var name="range_max" val="{0}" substitute="no"/>
+      <var name="playmode" val="{once}" substitute="no"/>
+      <var name="current" val="{0}" substitute="no"/>
+      <var name="execmode" val="{play}" substitute="no"/>
+      <var name="delay" val="{0}" substitute="no"/>
+      <var name="inc-amount" val="{1}" substitute="no"/>
+      <var name="send-amount" val="{1}" substitute="no"/>
+      <var name="data_series_done" val="{0}" substitute="no"/>
+    </module>
+    <module id="m11" package="BioPSE" category="Inverse" name="OptimizeDipole" version="1.0" gui_visible="yes">
+      <position x="283" y="144"/>
+      <var name="use_cache_gui_" val="{1}" substitute="no"/>
+      <var name="ui_geometry" val="{195x50+59+60}" substitute="no"/>
+    </module>
+    <module id="m12" package="SCIRun" category="DataIO" name="ReadField" version="1.0">
+      <position x="665" y="22"/>
+      <var name="filename" val="{scisub_datadir/scisub_dataset/scisub_dataset-dipole.pcv.fld}" filename="yes" substitute="yes"/>
+      <var name="from-env" val="{}" substitute="no"/>
+    </module>
+    <module id="m13" package="SCIRun" category="DataIO" name="ReadMatrix" version="1.0">
+      <position x="647" y="292"/>
+      <var name="filename" val="{scisub_datadir/scisub_dataset/generated/scisub_dataset-leadfield.mat}" filename="yes" substitute="yes"/>
+      <var name="from-env" val="{}" substitute="no"/>
+    </module>
+    <module id="m14" package="SCIRun" category="Math" name="GetColumnOrRowFromMatrix" version="1.0">
+      <position x="102" y="291"/>
+      <var name="row_or_col" val="{col}" substitute="no"/>
+      <var name="selectable_min" val="{0}" substitute="no"/>
+      <var name="selectable_max" val="{18380.0}" substitute="no"/>
+      <var name="selectable_inc" val="{18381}" substitute="no"/>
+      <var name="selectable_units" val="{}" substitute="no"/>
+      <var name="range_min" val="{0}" substitute="no"/>
+      <var name="range_max" val="{0}" substitute="no"/>
+      <var name="playmode" val="{once}" substitute="no"/>
+      <var name="current" val="{0}" substitute="no"/>
+      <var name="execmode" val="{stop}" substitute="no"/>
+      <var name="delay" val="{0}" substitute="no"/>
+      <var name="inc-amount" val="{1}" substitute="no"/>
+      <var name="send-amount" val="{1}" substitute="no"/>
+      <var name="data_series_done" val="{0}" substitute="no"/>
+    </module>
+    <module id="m15" package="SCIRun" category="Math" name="GetColumnOrRowFromMatrix" version="1.0">
+      <position x="283" y="292"/>
+      <var name="row_or_col" val="{col}" substitute="no"/>
+      <var name="selectable_min" val="{0}" substitute="no"/>
+      <var name="selectable_max" val="{18380.0}" substitute="no"/>
+      <var name="selectable_inc" val="{18381}" substitute="no"/>
+      <var name="selectable_units" val="{}" substitute="no"/>
+      <var name="range_min" val="{1}" substitute="no"/>
+      <var name="range_max" val="{1}" substitute="no"/>
+      <var name="playmode" val="{once}" substitute="no"/>
+      <var name="current" val="{1}" substitute="no"/>
+      <var name="execmode" val="{stop}" substitute="no"/>
+      <var name="delay" val="{0}" substitute="no"/>
+      <var name="inc-amount" val="{1}" substitute="no"/>
+      <var name="send-amount" val="{1}" substitute="no"/>
+      <var name="data_series_done" val="{0}" substitute="no"/>
+    </module>
+    <module id="m16" package="SCIRun" category="Math" name="GetColumnOrRowFromMatrix" version="1.0">
+      <position x="466" y="293"/>
+      <var name="row_or_col" val="{col}" substitute="no"/>
+      <var name="selectable_min" val="{0}" substitute="no"/>
+      <var name="selectable_max" val="{18380.0}" substitute="no"/>
+      <var name="selectable_inc" val="{18381}" substitute="no"/>
+      <var name="selectable_units" val="{}" substitute="no"/>
+      <var name="range_min" val="{2}" substitute="no"/>
+      <var name="range_max" val="{2}" substitute="no"/>
+      <var name="playmode" val="{once}" substitute="no"/>
+      <var name="current" val="{2}" substitute="no"/>
+      <var name="execmode" val="{stop}" substitute="no"/>
+      <var name="delay" val="{0}" substitute="no"/>
+      <var name="inc-amount" val="{1}" substitute="no"/>
+      <var name="send-amount" val="{1}" substitute="no"/>
+      <var name="data_series_done" val="{0}" substitute="no"/>
+    </module>
+    <module id="m17" package="SCIRun" category="Visualization" name="ShowField" version="2.0">
+      <position x="630" y="382"/>
+      <var name="nodes_on" val="{1}" substitute="no"/>
+      <var name="nodes_transparency" val="{0}" substitute="no"/>
+      <var name="nodes_color_type" val="{0}" substitute="no"/>
+      <var name="nodes_display_type" val="{Spheres}" substitute="no"/>
+      <var name="edges_on" val="{0}" substitute="no"/>
+      <var name="edges_transparency" val="{0}" substitute="no"/>
+      <var name="edges_color_type" val="{0}" substitute="no"/>
+      <var name="edges_display_type" val="{Lines}" substitute="no"/>
+      <var name="faces_on" val="{0}" substitute="no"/>
+      <var name="faces_transparency" val="{0}" substitute="no"/>
+      <var name="faces_color_type" val="{0}" substitute="no"/>
+      <var name="faces_normals" val="{0}" substitute="no"/>
+      <var name="faces_usetexture" val="{0}" substitute="no"/>
+      <var name="text_on" val="{0}" substitute="no"/>
+      <var name="text_color_type" val="{0}" substitute="no"/>
+      <var name="text_color-r" val="{1.0}" substitute="no"/>
+      <var name="text_color-g" val="{1.0}" substitute="no"/>
+      <var name="text_color-b" val="{1.0}" substitute="no"/>
+      <var name="text_backface_cull" val="{0}" substitute="no"/>
+      <var name="text_always_visible" val="{0}" substitute="no"/>
+      <var name="text_fontsize" val="{1}" substitute="no"/>
+      <var name="text_precision" val="{3}" substitute="no"/>
+      <var name="text_render_locations" val="{0}" substitute="no"/>
+      <var name="text_show_data" val="{1}" substitute="no"/>
+      <var name="text_show_nodes" val="{0}" substitute="no"/>
+      <var name="text_show_edges" val="{0}" substitute="no"/>
+      <var name="text_show_faces" val="{0}" substitute="no"/>
+      <var name="text_show_cells" val="{0}" substitute="no"/>
+      <var name="def_color-r" val="{0.5}" substitute="no"/>
+      <var name="def_color-g" val="{0.5}" substitute="no"/>
+      <var name="def_color-b" val="{0.5}" substitute="no"/>
+      <var name="def_color-a" val="{0.5}" substitute="no"/>
+      <var name="nodes_scale" val="{0.035}" substitute="no"/>
+      <var name="nodes_scaleNV" val="{0.03}" substitute="no"/>
+      <var name="edges_scale" val="{0.03}" substitute="no"/>
+      <var name="edges_scaleNV" val="{0.15}" substitute="no"/>
+      <var name="active_tab" val="{Nodes}" substitute="no"/>
+      <var name="interactive_mode" val="{Interactive}" substitute="no"/>
+      <var name="show_progress" val="{1}" substitute="no"/>
+      <var name="field_name" val="{}" substitute="no"/>
+      <var name="field_name_override" val="{0}" substitute="no"/>
+      <var name="nodes_resolution" val="{10}" substitute="no"/>
+      <var name="edges_resolution" val="{6}" substitute="no"/>
+      <var name="approx_div" val="{1}" substitute="no"/>
+      <var name="use_default_size" val="{0}" substitute="no"/>
+    </module>
+    <module id="m18" package="SCIRun" category="Math" name="GetColumnOrRowFromMatrix" version="1.0">
+      <position x="646" y="444"/>
+      <var name="row_or_col" val="{col}" substitute="no"/>
+      <var name="selectable_min" val="{0}" substitute="no"/>
+      <var name="selectable_max" val="{18380.0}" substitute="no"/>
+      <var name="selectable_inc" val="{18381}" substitute="no"/>
+      <var name="selectable_units" val="{}" substitute="no"/>
+      <var name="range_min" val="{0}" substitute="no"/>
+      <var name="range_max" val="{0}" substitute="no"/>
+      <var name="playmode" val="{once}" substitute="no"/>
+      <var name="current" val="{0}" substitute="no"/>
+      <var name="execmode" val="{play}" substitute="no"/>
+      <var name="delay" val="{0}" substitute="no"/>
+      <var name="inc-amount" val="{1}" substitute="no"/>
+      <var name="send-amount" val="{1}" substitute="no"/>
+      <var name="data_series_done" val="{0}" substitute="no"/>
+    </module>
+    <module id="m19" package="BioPSE" category="Forward" name="ApplyFEMCurrentSource" version="1.0">
+      <position x="647" y="144"/>
+      <var name="sourceNodeTCL" val="{0}" substitute="no"/>
+      <var name="sinkNodeTCL" val="{1}" substitute="no"/>
+      <var name="modeTCL" val="{dipole}" substitute="no"/>
+    </module>
+    <module id="m20" package="SCIRun" category="DataIO" name="ReadField" version="1.0">
+      <position x="807" y="355"/>
+      <var name="filename" val="{scisub_datadir/scisub_dataset/scisub_dataset-electrodes.pcv.fld}" filename="yes" substitute="yes"/>
+      <var name="from-env" val="{}" substitute="no"/>
+    </module>
+    <module id="m21" package="SCIRun" category="Visualization" name="ShowField" version="2.0">
+      <position x="648" y="671"/>
+      <var name="nodes_on" val="{1}" substitute="no"/>
+      <var name="nodes_transparency" val="{0}" substitute="no"/>
+      <var name="nodes_color_type" val="{1}" substitute="no"/>
+      <var name="nodes_display_type" val="{Spheres}" substitute="no"/>
+      <var name="edges_on" val="{0}" substitute="no"/>
+      <var name="edges_transparency" val="{0}" substitute="no"/>
+      <var name="edges_color_type" val="{1}" substitute="no"/>
+      <var name="edges_display_type" val="{Lines}" substitute="no"/>
+      <var name="faces_on" val="{0}" substitute="no"/>
+      <var name="faces_transparency" val="{0}" substitute="no"/>
+      <var name="faces_color_type" val="{1}" substitute="no"/>
+      <var name="faces_normals" val="{0}" substitute="no"/>
+      <var name="faces_usetexture" val="{0}" substitute="no"/>
+      <var name="text_on" val="{0}" substitute="no"/>
+      <var name="text_color_type" val="{0}" substitute="no"/>
+      <var name="text_color-r" val="{1.0}" substitute="no"/>
+      <var name="text_color-g" val="{1.0}" substitute="no"/>
+      <var name="text_color-b" val="{1.0}" substitute="no"/>
+      <var name="text_backface_cull" val="{0}" substitute="no"/>
+      <var name="text_always_visible" val="{0}" substitute="no"/>
+      <var name="text_fontsize" val="{1}" substitute="no"/>
+      <var name="text_precision" val="{3}" substitute="no"/>
+      <var name="text_render_locations" val="{0}" substitute="no"/>
+      <var name="text_show_data" val="{1}" substitute="no"/>
+      <var name="text_show_nodes" val="{0}" substitute="no"/>
+      <var name="text_show_edges" val="{0}" substitute="no"/>
+      <var name="text_show_faces" val="{0}" substitute="no"/>
+      <var name="text_show_cells" val="{0}" substitute="no"/>
+      <var name="def_color-r" val="{0.5}" substitute="no"/>
+      <var name="def_color-g" val="{0.5}" substitute="no"/>
+      <var name="def_color-b" val="{0.5}" substitute="no"/>
+      <var name="def_color-a" val="{0.5}" substitute="no"/>
+      <var name="nodes_scale" val="{0.036}" substitute="no"/>
+      <var name="nodes_scaleNV" val="{0.03}" substitute="no"/>
+      <var name="edges_scale" val="{0.03}" substitute="no"/>
+      <var name="edges_scaleNV" val="{0.15}" substitute="no"/>
+      <var name="active_tab" val="{Vectors}" substitute="no"/>
+      <var name="interactive_mode" val="{Interactive}" substitute="no"/>
+      <var name="show_progress" val="{1}" substitute="no"/>
+      <var name="field_name" val="{}" substitute="no"/>
+      <var name="field_name_override" val="{0}" substitute="no"/>
+      <var name="nodes_resolution" val="{10}" substitute="no"/>
+      <var name="edges_resolution" val="{6}" substitute="no"/>
+      <var name="approx_div" val="{1}" substitute="no"/>
+      <var name="use_default_size" val="{0}" substitute="no"/>
+    </module>
+    <module id="m22" package="SCIRun" category="ChangeFieldData" name="SwapFieldDataWithMatrixEntries" version="1.0">
+      <position x="843" y="433"/>
+      <var name="preserve-scalar-type" val="{0}" substitute="no"/>
+    </module>
+    <module id="m23" package="SCIRun" category="Visualization" name="CreateStandardColorMaps" version="1.0">
+      <position x="825" y="494"/>
+      <var name="mapName" val="{Old Rainbow}" substitute="no"/>
+      <var name="gamma" val="{0.0}" substitute="no"/>
+      <var name="resolution" val="{255}" substitute="no"/>
+      <var name="reverse" val="{0}" substitute="no"/>
+      <var name="faux" val="{0}" substitute="no"/>
+      <var name="positionList" val="{}" substitute="no"/>
+      <var name="nodeList" val="{}" substitute="no"/>
+      <var name="width" val="{1}" substitute="no"/>
+      <var name="height" val="{1}" substitute="no"/>
+    </module>
+    <module id="m24" package="SCIRun" category="Visualization" name="RescaleColorMap" version="1.0">
+      <position x="825" y="577"/>
+      <var name="main_frame" val="{}" substitute="no"/>
+      <var name="isFixed" val="{0}" substitute="no"/>
+      <var name="min" val="{-0.00127338964452}" substitute="no"/>
+      <var name="max" val="{0.0371842192075}" substitute="no"/>
+      <var name="makeSymmetric" val="{0}" substitute="no"/>
+    </module>
+    <module id="m25" package="SCIRun" category="ChangeFieldData" name="SwapFieldDataWithMatrixEntries" version="1.0">
+      <position x="412" y="603"/>
+      <var name="preserve-scalar-type" val="{0}" substitute="no"/>
+    </module>
+    <module id="m26" package="SCIRun" category="Visualization" name="ShowFieldGlyphs" version="1.0">
+      <position x="412" y="663"/>
+      <var name="scalars_has_data" val="{0}" substitute="no"/>
+      <var name="scalars_on" val="{0}" substitute="no"/>
+      <var name="scalars_display_type" val="{Spheres}" substitute="no"/>
+      <var name="scalars_transparency" val="{0}" substitute="no"/>
+      <var name="scalars_normalize" val="{0}" substitute="no"/>
+      <var name="scalars_color_type" val="{0}" substitute="no"/>
+      <var name="scalars_resolution" val="{6}" substitute="no"/>
+      <var name="vectors_has_data" val="{1}" substitute="no"/>
+      <var name="vectors_on" val="{1}" substitute="no"/>
+      <var name="vectors_display_type" val="{Disks}" substitute="no"/>
+      <var name="vectors_transparency" val="{0}" substitute="no"/>
+      <var name="vectors_normalize" val="{1}" substitute="no"/>
+      <var name="vectors_bidirectional" val="{0}" substitute="no"/>
+      <var name="vectors_color_type" val="{0}" substitute="no"/>
+      <var name="vectors_resolution" val="{20}" substitute="no"/>
+      <var name="tensors_has_data" val="{0}" substitute="no"/>
+      <var name="tensors_on" val="{0}" substitute="no"/>
+      <var name="tensors_display_type" val="{Colored Boxes}" substitute="no"/>
+      <var name="tensors_transparency" val="{0}" substitute="no"/>
+      <var name="tensors_normalize" val="{0}" substitute="no"/>
+      <var name="tensors_color_type" val="{0}" substitute="no"/>
+      <var name="tensors_resolution" val="{6}" substitute="no"/>
+      <var name="tensors_emphasis" val="{0.825}" substitute="no"/>
+      <var name="secondary_has_data" val="{1}" substitute="no"/>
+      <var name="secondary_on" val="{1}" substitute="no"/>
+      <var name="secondary_display_type" val="{Major Radius}" substitute="no"/>
+      <var name="secondary_color_type" val="{1}" substitute="no"/>
+      <var name="secondary_alpha" val="{0}" substitute="no"/>
+      <var name="secondary_value" val="{0}" substitute="no"/>
+      <var name="tertiary_has_data" val="{0}" substitute="no"/>
+      <var name="tertiary_on" val="{0}" substitute="no"/>
+      <var name="tertiary_display_type" val="{Minor Radius}" substitute="no"/>
+      <var name="tertiary_color_type" val="{0}" substitute="no"/>
+      <var name="tertiary_alpha" val="{0}" substitute="no"/>
+      <var name="tertiary_value" val="{1}" substitute="no"/>
+      <var name="text_on" val="{0}" substitute="no"/>
+      <var name="text_color_type" val="{0}" substitute="no"/>
+      <var name="text_color-r" val="{1.0}" substitute="no"/>
+      <var name="text_color-g" val="{1.0}" substitute="no"/>
+      <var name="text_color-b" val="{1.0}" substitute="no"/>
+      <var name="text_backface_cull" val="{0}" substitute="no"/>
+      <var name="text_always_visible" val="{0}" substitute="no"/>
+      <var name="text_fontsize" val="{0}" substitute="no"/>
+      <var name="text_precision" val="{3}" substitute="no"/>
+      <var name="text_render_locations" val="{0}" substitute="no"/>
+      <var name="text_show_data" val="{1}" substitute="no"/>
+      <var name="text_show_nodes" val="{0}" substitute="no"/>
+      <var name="text_show_edges" val="{0}" substitute="no"/>
+      <var name="text_show_faces" val="{0}" substitute="no"/>
+      <var name="text_show_cells" val="{0}" substitute="no"/>
+      <var name="def_color-r" val="{0.5}" substitute="no"/>
+      <var name="def_color-g" val="{0.5}" substitute="no"/>
+      <var name="def_color-b" val="{0.5}" substitute="no"/>
+      <var name="def_color-a" val="{0.5}" substitute="no"/>
+      <var name="vectors_scale" val="{0.05}" substitute="no"/>
+      <var name="secondary_scale" val="{1.0}" substitute="no"/>
+      <var name="active_tab" val="{Vectors}" substitute="no"/>
+      <var name="interactive_mode" val="{Interactive}" substitute="no"/>
+      <var name="show_progress" val="{1}" substitute="no"/>
+      <var name="field_name" val="{}" substitute="no"/>
+      <var name="field_name_override" val="{1}" substitute="no"/>
+      <var name="approx_div" val="{1}" substitute="no"/>
+      <var name="use_default_size" val="{0}" substitute="no"/>
+      <var name="ui_geometry" val="{361x696+970+257}" substitute="no"/>
+    </module>
+  </modules>
+  <connections>
+    <connection id="c1" from="m11" fromport="0" to="m14" toport="0"/>
+    <connection id="c2" from="m11" fromport="0" to="m15" toport="0"/>
+    <connection id="c3" from="m11" fromport="0" to="m16" toport="0"/>
+    <connection id="c4" from="m11" fromport="1" to="m6" toport="0"/>
+    <connection id="c5" from="m11" fromport="2" to="m17" toport="0"/>
+    <connection id="c6" from="m5" fromport="1" to="m4" toport="0"/>
+    <connection id="c7" from="m22" fromport="0" to="m21" toport="0"/>
+    <connection id="c8" from="m1" fromport="0" to="m19" toport="0"/>
+    <connection id="c9" from="m1" fromport="0" to="m2" toport="0"/>
+    <connection id="c10" from="m12" fromport="0" to="m5" toport="0"/>
+    <connection id="c11" from="m20" fromport="0" to="m22" toport="0"/>
+    <connection id="c12" from="m20" fromport="0" to="m25" toport="0"/>
+    <connection id="c13" from="m20" fromport="0" to="m26" toport="0"/>
+    <connection id="c14" from="m13" fromport="0" to="m8" toport="0"/>
+    <connection id="c15" from="m13" fromport="0" to="m9" toport="0"/>
+    <connection id="c16" from="m13" fromport="0" to="m10" toport="0"/>
+    <connection id="c17" from="m13" fromport="0" to="m18" toport="0"/>
+    <connection id="c18" from="m8" fromport="0" to="m7" toport="0"/>
+    <connection id="c19" from="m7" fromport="1" to="m3" toport="0"/>
+    <connection id="c20" from="m2" fromport="0" to="m11" toport="0"/>
+    <connection id="c21" from="m23" fromport="0" to="m24" toport="0"/>
+    <connection id="c22" from="m19" fromport="1" to="m18" toport="1"/>
+    <connection id="c23" from="m5" fromport="0" to="m19" toport="1"/>
+    <connection id="c24" from="m6" fromport="1" to="m4" toport="1"/>
+    <connection id="c25" from="m22" fromport="0" to="m24" toport="1"/>
+    <connection id="c26" from="m1" fromport="0" to="m11" toport="1"/>
+    <connection id="c27" from="m9" fromport="0" to="m7" toport="1"/>
+    <connection id="c28" from="m14" fromport="0" to="m8" toport="1"/>
+    <connection id="c29" from="m15" fromport="0" to="m9" toport="1"/>
+    <connection id="c30" from="m16" fromport="0" to="m10" toport="1"/>
+    <connection id="c31" from="m18" fromport="0" to="m22" toport="1"/>
+    <connection id="c32" from="m18" fromport="0" to="m3" toport="1"/>
+    <connection id="c33" from="m7" fromport="1" to="m25" toport="1"/>
+    <connection id="c34" from="m24" fromport="0" to="m21" toport="1"/>
+    <connection id="c35" from="m25" fromport="0" to="m26" toport="2"/>
+    <connection id="c36" from="m10" fromport="0" to="m7" toport="2"/>
+    <connection id="c37" from="m3" fromport="0" to="m11" toport="2"/>
+    <connection id="c38" from="m17" fromport="0" to="m4" toport="2"/>
+    <connection id="c39" from="m18" fromport="0" to="m7" toport="3"/>
+    <connection id="c40" from="m7" fromport="0" to="m11" toport="3"/>
+    <connection id="c41" from="m24" fromport="0" to="m26" toport="3"/>
+    <connection id="c42" from="m21" fromport="0" to="m4" toport="3"/>
+    <connection id="c43" from="m26" fromport="0" to="m4" toport="4"/>
+  </connections>
+</network>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE network PUBLIC "-//SCIRun/Network DTD" "network.dtd">
+<network version="v3.1.0" netversion="0" name="{Main}" bbox="{134 20 533 343}" creationDate="{Tue Jun 24 2008}" creationTime="{13:40:31}" geometry="{800x800+0+0}">
+  <note>{}</note>
+  <modules>
+    <module id="m1" package="SCIRun" category="Visualization" name="ShowLinePath" version="1.0">
+      <position x="305" y="178"/>
+    </module>
+    <module id="m2" package="SCIRun" category="Visualization" name="ShowPointPath" version="1.0">
+      <position x="134" y="178"/>
+    </module>
+    <module id="m3" package="SCIRun" category="Math" name="CreateMatrix" version="1.0">
+      <position x="134" y="21"/>
+      <var name="rows" val="{3}" substitute="no"/>
+      <var name="cols" val="{4}" substitute="no"/>
+      <var name="data" val="{{0.0 0.0 0.0} {10.0 0.0 0.0} {0.0 10.0 0.0} {0.0 0.0 10.0}}" substitute="no"/>
+      <var name="clabel" val="{0 1 2 3}" substitute="no"/>
+      <var name="rlabel" val="{0 1 2}" substitute="no"/>
+      <var name="ui_geometry" val="{433x252+80+225}" substitute="no"/>
+    </module>
+    <module id="m4" package="SCIRun" category="Visualization" name="CreateStandardColorMaps" version="1.0">
+      <position x="323" y="20"/>
+      <var name="mapName" val="{Rainbow}" substitute="no"/>
+      <var name="gamma" val="{0.0}" substitute="no"/>
+      <var name="resolution" val="{256}" substitute="no"/>
+      <var name="reverse" val="{0}" substitute="no"/>
+      <var name="faux" val="{0}" substitute="no"/>
+      <var name="positionList" val="{}" substitute="no"/>
+      <var name="nodeList" val="{}" substitute="no"/>
+      <var name="width" val="{1}" substitute="no"/>
+      <var name="height" val="{1}" substitute="no"/>
+    </module>
+    <module id="m5" package="SCIRun" category="Render" name="ViewScene" version="1.0">
+      <position x="248" y="299"/>
+      <gui_callback>
+        <callback>addViewer</callback>
+      </gui_callback>
+      <var name="ViewWindow_0-geometry" val="654x613+1680+44" substitute="no"/>
+      <var name="ViewWindow_0-view-eyep-x" val="{-24.1098864011}" substitute="no"/>
+      <var name="ViewWindow_0-view-eyep-y" val="{-47.736890375}" substitute="no"/>
+      <var name="ViewWindow_0-view-eyep-z" val="{48.1677580016}" substitute="no"/>
+      <var name="ViewWindow_0-view-lookat-x" val="{0.5}" substitute="no"/>
+      <var name="ViewWindow_0-view-lookat-y" val="{0.5}" substitute="no"/>
+      <var name="ViewWindow_0-view-lookat-z" val="{0.5}" substitute="no"/>
+      <var name="ViewWindow_0-view-up-x" val="{0.167694535916}" substitute="no"/>
+      <var name="ViewWindow_0-view-up-y" val="{0.64833737791}" substitute="no"/>
+      <var name="ViewWindow_0-view-up-z" val="{0.742655496868}" substitute="no"/>
+      <var name="ViewWindow_0-view-fov" val="{20.0}" substitute="no"/>
+      <var name="ViewWindow_0-sr" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-do_stereo" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-ortho-view" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-trackViewWindow0" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-lock-view-window" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-raxes" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-ambient-scale" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-diffuse-scale" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-specular-scale" val="{0.4}" substitute="no"/>
+      <var name="ViewWindow_0-emission-scale" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-shininess-scale" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-polygon-offset-factor" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-polygon-offset-units" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-point-size" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-line-width" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-sbase" val="{0.4}" substitute="no"/>
+      <var name="ViewWindow_0-bgcolor-r" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-bgcolor-g" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-bgcolor-b" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-fogusebg" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-fogcolor-r" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-fogcolor-g" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-fogcolor-b" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-fog-start" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-fog-end" val="{0.714265}" substitute="no"/>
+      <var name="ViewWindow_0-fog-visibleonly" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-inertia_loop_count" val="{45}" substitute="no"/>
+      <var name="ViewWindow_0-inertia_x" val="{1.0}" substitute="no"/>
+      <var name="ViewWindow_0-inertia_y" val="{0.0}" substitute="no"/>
+      <var name="ViewWindow_0-currentvisual" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-autoav" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-caxes" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-light0" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-global-light1" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-light2" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-light3" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-lightColors" val="{{1.0 1.0 1.0} {1.0 1.0 1.0} {1.0 1.0 1.0} {1.0 1.0 1.0}}" substitute="no"/>
+      <var name="ViewWindow_0-lightVectors" val="{{ 0 0 1 } { 0 0 1 } { 0 0 1 } { 0 0 1 }}" substitute="no"/>
+      <var name="ViewWindow_0-global-light" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-global-fog" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-debug" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-clip" val="{1}" substitute="no"/>
+      <var name="ViewWindow_0-global-cull" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-dl" val="{0}" substitute="no"/>
+      <var name="ViewWindow_0-global-type" val="{Gouraud}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-ShowPointPathPoint0 (1)&quot;" val="{1}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-ShowPointPathPoint1 (1)&quot;" val="{1}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-ShowPointPathPoint2 (1)&quot;" val="{1}" substitute="no"/>
+      <var name="&quot;ViewWindow_0-ShowPointPathPoint3 (1)&quot;" val="{1}" substitute="no"/>
+    </module>
+  </modules>
+  <connections>
+    <connection id="c1" from="m3" fromport="0" to="m1" toport="0"/>
+    <connection id="c2" from="m3" fromport="0" to="m2" toport="0"/>
+    <connection id="c3" from="m2" fromport="0" to="m5" toport="0"/>
+    <connection id="c4" from="m4" fromport="0" to="m1" toport="1"/>
+    <connection id="c5" from="m1" fromport="0" to="m5" toport="1"/>
+  </connections>
+</network>
