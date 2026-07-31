@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE colormap SYSTEM "colormap.dtd">
+<colormap name="TERcolormap">
+  <color a="1" b="0.50" g="0.00" r="0.00" x="0.00"/>
+  <color a="1" b="0.85" g="0.75" r="0.00" x="0.25"/>
+  <color a="1" b="1.00" g="1.00" r="1.00" x="0.50"/>
+  <color a="1" b="0.00" g="0.50" r="0.90" x="0.75"/>
+  <color a="1" b="0.00" g="0.00" r="0.40" x="1.00"/>
+</colormap>
